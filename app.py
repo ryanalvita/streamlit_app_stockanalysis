@@ -7,9 +7,7 @@ from pymongo import MongoClient
 import altair as alt
 
 # MongoDB
-cluster = MongoClient(
-    "mongodb+srv://mongo:KgWIfb4AzqkTyDXb@stockanalysis.f30kw8z.mongodb.net/?retryWrites=true&w=majority"
-)
+cluster = MongoClient(st.secrets["MONGODB_URI"])
 
 # Get overview
 db_financial_data = cluster["financial_data"]
